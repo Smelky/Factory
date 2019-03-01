@@ -1,61 +1,60 @@
 package com.smelk.car;
 
 public class CarDoor {
-
-    private Boolean window = false;
-    private Boolean door = false;
+    private Boolean isWindowOpened;
+    private Boolean isDoorOpened;
 
     public CarDoor() {
 
     }
 
     public CarDoor(Boolean window, Boolean door) {
-        this.window = window;
-        this.door = door;
+        this.isWindowOpened = window;
+        this.isDoorOpened = door;
     }
 
     public Boolean getWindow() {
-        return window;
+        return isWindowOpened;
     }
 
     public Boolean getDoor() {
-        return door;
+        return isDoorOpened;
     }
 
     public void openDoor() {
-        this.door = true;
+        this.isDoorOpened = true;
     }
 
     public void closeDoor() {
-        this.door = false;
+        this.isDoorOpened = false;
     }
 
     public void changeDoorStatus() {
-        if (this.door == true) {
-            this.door = false;
+        if (this.isDoorOpened == true) {
+            this.isDoorOpened = false;
         } else {
-            this.door = true;
+            this.isDoorOpened = true;
         }
     }
 
     public void openWindow() {
-        this.window = true;
+        this.isWindowOpened = true;
     }
 
     public void closeWindow() {
-        this.window = false;
+        this.isWindowOpened = false;
     }
 
     public void changeWindowStatus() {
-        if (this.window == true) {
-            this.window = false;
+        if (this.isWindowOpened == true) {
+            this.isWindowOpened = false;
         } else {
-            this.window = true;
+            this.isWindowOpened = true;
         }
     }
 
     public void displayDoor() {
-        if (this.door == true) {
+        if (this.isDoorOpened == true) {
             System.out.print("open");
         } else {
             System.out.print("closed");
@@ -63,7 +62,7 @@ public class CarDoor {
     }
 
     public void displayWindow() {
-        if (this.window == true) {
+        if (this.isWindowOpened == true) {
             System.out.print("open");
         } else {
             System.out.print("closed");
