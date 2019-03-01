@@ -1,8 +1,8 @@
 package com.smelk.car;
 
 public class CarDoor {
-    private Boolean isWindowOpened;
-    private Boolean isDoorOpened;
+    private Boolean isWindowOpened = false;
+    private Boolean isDoorOpened = false;
 
     public CarDoor() {
 
@@ -22,39 +22,39 @@ public class CarDoor {
     }
 
     public void openDoor() {
-        this.isDoorOpened = true;
+        isDoorOpened = true;
     }
 
     public void closeDoor() {
-        this.isDoorOpened = false;
+        isDoorOpened = false;
     }
 
     public void changeDoorStatus() {
-        if (this.isDoorOpened == true) {
-            this.isDoorOpened = false;
+        if (isDoorOpened == true) {
+            isDoorOpened = false;
         } else {
-            this.isDoorOpened = true;
+            isDoorOpened = true;
         }
     }
 
     public void openWindow() {
-        this.isWindowOpened = true;
+        isWindowOpened = true;
     }
 
     public void closeWindow() {
-        this.isWindowOpened = false;
+        isWindowOpened = false;
     }
 
     public void changeWindowStatus() {
-        if (this.isWindowOpened == true) {
-            this.isWindowOpened = false;
+        if (isWindowOpened == true) {
+            isWindowOpened = false;
         } else {
-            this.isWindowOpened = true;
+            isWindowOpened = true;
         }
     }
 
     public void displayDoor() {
-        if (this.isDoorOpened == true) {
+        if (isDoorOpened == true) {
             System.out.print("open");
         } else {
             System.out.print("closed");
@@ -62,7 +62,7 @@ public class CarDoor {
     }
 
     public void displayWindow() {
-        if (this.isWindowOpened == true) {
+        if (isWindowOpened == true) {
             System.out.print("open");
         } else {
             System.out.print("closed");

@@ -8,7 +8,7 @@ public class Car {
     private int passengerCapacity;
     private int passengerCapacityInThisMoment;
     private int currentSpeed;
-    private CarDoor[] doors = new CarDoor[4];
+    private CarDoor[] doors = {new CarDoor(), new CarDoor(), new CarDoor(), new CarDoor()};
     private CarWheel[] wheels = {new CarWheel(1), new CarWheel(0.8), new CarWheel(0.9), new CarWheel(0.7)};
 
     public Car(String DATE_OF_CREATION) {
@@ -94,7 +94,7 @@ public class Car {
                 theWorstWheel = wheels[i + 1].getCondition();
             }
         }
-        if (passengerCapacity > 0 | getWheels().length > 0) {
+        if (this.passengerCapacity > 0 | getWheels().length > 0) {
             return currentMaxSpeed = currentMaxSpeed * theWorstWheel;
         } else {
             return currentMaxSpeed = 0;
