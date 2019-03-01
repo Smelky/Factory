@@ -1,7 +1,9 @@
 package com.smelk.car;
 
+import java.time.LocalDate;
+
 public class Car {
-    private final String dateOfCreation;
+    private final LocalDate dateOfCreation;
     private String typeOfEngine;
     private double maxSpeed;
     private int accelerationTime;
@@ -11,12 +13,12 @@ public class Car {
     private CarDoor[] doors = {new CarDoor(), new CarDoor(), new CarDoor(), new CarDoor()};
     private CarWheel[] wheels = {new CarWheel(1), new CarWheel(0.8), new CarWheel(0.9), new CarWheel(0.7)};
 
-    public Car(String DATE_OF_CREATION) {
-        this.dateOfCreation = DATE_OF_CREATION;
+    public Car(LocalDate dateOfCreation) {
+        this.dateOfCreation = dateOfCreation;
     }
 
-    public Car(String DATE_OF_CREATION, String typeOfEngine, double maxSpeed, int accelerationTime, int passengerCapacity, int passengerCapacityInThisMoment, int currentSpeed) {
-        this.dateOfCreation = DATE_OF_CREATION;
+    public Car(LocalDate dateOfCreation, String typeOfEngine, double maxSpeed, int accelerationTime, int passengerCapacity, int passengerCapacityInThisMoment, int currentSpeed) {
+        this.dateOfCreation = dateOfCreation;
         this.typeOfEngine = typeOfEngine;
         this.maxSpeed = maxSpeed;
         this.accelerationTime = accelerationTime;
