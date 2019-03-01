@@ -14,7 +14,7 @@ public class ForUser {
         System.out.println("Press 2 if you want work with wheels: ");
         System.out.println("Press 3 if you want work with car: ");
         System.out.println("Press 4 for display all car's parameters: ");
-        System.out.println("Press 0 if you to exit from app: ");
+        System.out.println("Press 0 if you want to exit from app: ");
         int usersChoose = chooseFunc.nextInt();
         switch (usersChoose) {
             case 1: {
